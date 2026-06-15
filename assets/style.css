@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #262624;
+    color: #a77cde;
+}
+
+.container {
+    width: 320px;
+    max-height: 90vh;
+    background: #120820;
+    border-radius: 24px;
+    padding: 32px 24px;
+    border: 1px solid rgba(167, 124, 222, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name-app {
+    font-size: 26px;
+    font-weight: 700;
+    color: #ede5f7;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+}
+
+.name-app span {
+    color: #a77cde;
+}
+
+.tagline {
+    color: #c4a8ee;
+    width: 80%;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.dice {
+    width: 120px;
+    height: 120px;
+}
+
+.container>span {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: -10px;
+    margin-bottom: 16px;
+}
+
+.interval-number {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.interval-number .of label,
+.interval-number .to label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.interval-number .of input,
+.interval-number .to input {
+    width: 100%;
+    padding: 10px 8px;
+    background: rgba(167, 124, 222, 0.08);
+    border: 1px solid rgba(167, 124, 222, 0.28);
+    border-radius: 10px;
+    color: #ede5f7;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 5px;
+    outline: none;
+    appearance: none;
+    transition: border-color 0.2s;
+}
+
+.interval-number .of input:focus,
+.interval-number .to input:focus {
+    border-color: rgba(167, 124, 222, 0.7);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.container button {
+    width: 100%;
+    padding: 14px;
+    background: #a77cde;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background 0.2s, opacity 0.2s;
+}
+
+.container button:hover:not(:disabled) {
+    background: rgba(167, 124, 222, 0.8);
+}
+
+.container button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background: rgba(167, 124, 222, 0.18);
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.result {
+    height: 130px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.message {
+    font-size: 12px;
+    position: relative;
+    top: -40%;
+    transform: translateY(60%);
+}
+
+.result-wait {
+    color: rgba(207, 188, 232, 0.28);
+}
+
+.result-drawing {
+    color: #c4a8ee;
+}
+
+.result-alert {
+    color: #fff;
+    padding: 0 30px;
+}
+
+.result-number {
+    font-size: 50px;
+    font-weight: 700;
+    color: #ede5f7;
+    line-height: 1;
+}
+
+.badge {
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.badge a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(167, 124, 222, 0.2);
+    border-radius: 24px;
+    padding: 6px 12px 6px 8px;
+    text-decoration: none;
+}
+
+.badge a .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #B99CDE, #FABAB8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.badge a .container-badge {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.container-badge span:nth-child(1) {
+    font-size: 10px;
+    color: rgba(207, 188, 232, 0.45);
+}
+
+.container-badge span:nth-child(2) {
+    font-size: 12px;
+    font-weight: 500;
+    color: #ede5f7;
+}
+
+.container-badge span:nth-child(3) {
+    font-size: 10px;
+    color: #a77cde;
+}
+
+@media (min-width: 600px) {
+    .message {
+        top: -20%;
+    }
+
+    .badge {
+        margin-top: unset;
+        padding-top: unset;
+        width: unset;
+    }
+
+    .badge a {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+    }
+
+    .container-badge span:nth-child(1) {
+        font-size: 10px;
+        color: #aaa;
+    }
+
+    .container-badge span:nth-child(2) {
+        font-size: 12px;
+        color: #333;
+    }
+
+    .container-badge span:nth-child(3) {
+        font-size: 10px;
+        color: #715EAE;
+    }
+}

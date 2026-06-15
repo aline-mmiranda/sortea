@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aline M Miranda - aline-mmiranda">
+    <title>sortea.</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script>
+</head>
+
+<body>
+    <main class="container">
+        <h1 class="name-app">sortea<span>.</span></h1>
+        <h2 class="tagline">"Você define os limites. O sortea decide o resto."</h2>
+
+        <lottie-player class="dice" id="dice" src="./assets/img/dice-purple.json" background="transparent" speed="2">
+        </lottie-player>
+
+        <span>Defina o intervalo</span>
+        <section class="interval-number">
+            <div class="of">
+                <label for="of">De</label>
+                <input type="number" name="of" id="of">
+            </div>
+            <div class="to">
+                <label for="to">Até</label>
+                <input type="number" name="to" id="to">
+            </div>
+        </section>
+
+        <button id="draw-number">Sortear</button>
+
+        <div class="line"></div>
+
+        <section class="result">
+            <span class="message result-wait">Aguardando sorteio...</span>
+        </section>
+
+        <section class="badge">
+            <a href="https://www.linkedin.com/in/aline-mmiranda/" target="_blank" rel="noopener noreferrer">
+                <div class="avatar" aria-hidden="true">AM</div>
+                <div class="container-badge">
+                    <span>feito por</span>
+                    <span>Aline M Miranda</span>
+                    <span>design & dev</span>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
