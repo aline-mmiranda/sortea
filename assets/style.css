@@ -18,7 +18,7 @@ body {
 
 .container {
     width: 320px;
-    max-height: 90vh;
+    min-height: 580px;
     background: #120820;
     border-radius: 24px;
     padding: 32px 24px;
@@ -144,15 +144,14 @@ input[type=number] {
     height: 130px;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
 .message {
     font-size: 12px;
-    position: relative;
-    top: -40%;
-    transform: translateY(60%);
 }
 
 .result-wait {
@@ -176,6 +175,7 @@ input[type=number] {
 }
 
 .badge {
+    margin-top: auto;
     padding-top: 20px;
     width: 100%;
     display: flex;
@@ -229,10 +229,6 @@ input[type=number] {
 }
 
 @media (min-width: 600px) {
-    .message {
-        top: -20%;
-    }
-
     .badge {
         margin-top: unset;
         padding-top: unset;
