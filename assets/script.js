@@ -2,7 +2,7 @@ const drawNumber = document.getElementById('draw-number');
 const diceAnimation = document.getElementById('dice');
 const ofInput = document.getElementById('of');
 const toInput = document.getElementById('to');
-const resultEl = document.getElementById('.result-message');
+const resultEl = document.getElementById('result-message');
 
 const drawDuration = 3000;
 const resultDuration = 3000;
