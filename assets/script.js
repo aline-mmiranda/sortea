@@ -2,7 +2,7 @@ const drawNumber = document.getElementById('draw-number');
 const diceAnimation = document.getElementById('dice');
 const ofInput = document.getElementById('of');
 const toInput = document.getElementById('to');
-const resultEl = document.querySelector('.result-wait');
+const resultEl = document.getElementById('.result-message');
 
 const drawDuration = 3000;
 const resultDuration = 3000;
@@ -32,7 +32,7 @@ drawNumber.addEventListener('click', () => {
         setResultState('result-number', String(result));
 
         setTimeout(() => {
-            resetState('result-number');
+            resetState();
         }, resultDuration);
 
     }, drawDuration);
@@ -46,7 +46,7 @@ drawNumber.addEventListener('click', () => {
 
 function showAlert(message) {
     setResultState('result-alert', message);
-    setTimeout(() => resetState('result-alert'), 3000);
+    setTimeout(resetState, 3000);
 }
 
 const messageStates = ['result-wait', 'result-drawing', 'result-number', 'result-alert'];
